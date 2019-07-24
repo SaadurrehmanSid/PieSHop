@@ -6,40 +6,40 @@
     <div asp-validation-summary="All" class="text-danger"></div>
 
     <div class="form-group">
-        <label asp-for="Name" class="col-md-2 control-label"></label>
-        <div class="col-md-5">
-            <input asp-for="Name" class="form-control col-md-6" />
+        <label asp-for="Name" class="control-label"></label>
+        <div>
+            <input asp-for="Name" class="form-control " />
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
     </div>
 
     <div class="form-group">
-        <label asp-for="Email" class="col-md-2 control-label"></label>
-        <div class="col-md-5">
-            <input asp-for="Email" class="form-control nav-link" />
+        <label asp-for="Email" class="control-label"></label>
+        <div >
+            <input asp-for="Email" class="form-control " />
             <span asp-validation-for="Email" class="text-danger"></span>
         </div>
     </div>
 
     <div class="form-group">
-        <label asp-for="Message" class="col-md-2 control-label"></label>
-        <div class="col-md-5">
-            <textarea asp-for="Message" class="form-control nav-link" ></textarea>
+        <label asp-for="Message" class="control-label"></label>
+        <div>
+            <textarea asp-for="Message" class="form-control " ></textarea>
             <span asp-validation-for="Message" class="text-danger"></span>
         </div>
     </div>
 
     <div class="form-group">
-        <label asp-for="ContactMe" class="col-md-2 control-label"></label>
-        <div class="col-md-5">
-            <input type="checkbox" asp-for="ContactMe" class="form-control" />
-        </div>
+        <label asp-for="ContactMe" class="control-label mr-3"></label>
+        
+            <input type="checkbox" asp-for="ContactMe" style="height:20px; width:20px;"/>
+       
     </div>
 
     <div class="form-group">
-        <div class="col-md-offset-2 col-md-5">
+        
             <input type="submit" class="btn btn-primary" value="Send feedback" />
-        </div>
+        
     </div>
 
 </form>
