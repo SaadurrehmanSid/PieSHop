@@ -28,9 +28,14 @@ using PieShop.Areas.Identity.Pages.Account;
 
 #line default
 #line hidden
+#line 2 "C:\Users\Saad ur rehman\source\repos\PieSHop\Areas\Identity\Pages\Account\_ViewImports.cshtml"
+using PieShop.Models;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"acf321d273a4b4dd8650c17231b06987dc03df69", @"/Areas/Identity/Pages/Account/Logout.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"15119bc2af5040a30e981b97d225e5b5d82f9530", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1fbae575843d4ad7a5c1e511ef815d5771dbdbc8", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a8d9470ff3371ba339c96f98795bdb5cc9ec7c22", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account_Logout : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #pragma warning disable 1998

@@ -9,20 +9,21 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using PieShop.Models;
 
 namespace PieShop.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -40,9 +41,18 @@ namespace PieShop.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            [MaxLength(30), Display(Name = "User Name")]
+            public string Name { get; set; }
+
+            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
+
+            [Required]
+            [DataType(DataType.PhoneNumber)]
+            [MaxLength(11, ErrorMessage = "Phone number can not exceed 11 digits")]
+            public string Phone { get; set; }
 
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
@@ -54,6 +64,14 @@ namespace PieShop.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+            [Required]
+            [MaxLength(30)]
+            public string City { get; set; }
+            [Required]
+            public string Address { get; set; }
+            [Required]
+            [MaxLength(20)]
+            public string Country { get; set; }
         }
 
         public void OnGet(string returnUrl = null)
@@ -66,7 +84,12 @@ namespace PieShop.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
+                var user = new ApplicationUser { UserName = Input.Name,
+                                                 Email = Input.Email,
+                                                 PhoneNumber = Input.Phone,
+                                                 Address = Input.Address,
+                                                 City= Input.City,
+                                                  Country= Input.Country};
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

@@ -74,3 +74,6 @@ C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Areas
 C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
+C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Account\Index.g.cshtml.cs
+C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Account\CreateUser.g.cshtml.cs
+C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Account\EditUser.g.cshtml.cs

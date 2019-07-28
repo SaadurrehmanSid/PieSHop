@@ -35,6 +35,7 @@ namespace PieShop
             services.AddMvc();
             services.AddIdentityCore<IdentityOptions>(options =>{ options.Password.RequireUppercase = false;
                 options.Password.RequireNonAlphanumeric = false;
+                options.User.AllowedUserNameCharacters = String.Empty;
             }); 
         }
 
@@ -48,10 +49,7 @@ namespace PieShop
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseMvcWithDefaultRoute();
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+          
         }
     }
 }

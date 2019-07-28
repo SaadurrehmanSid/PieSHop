@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PieShop.Data_Access_Layer;
+using PieShop.Models;
 
 [assembly: HostingStartup(typeof(PieShop.Areas.Identity.IdentityHostingStartup))]
 namespace PieShop.Areas.Identity
@@ -15,7 +16,7 @@ namespace PieShop.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();
+                services.AddDefaultIdentity<ApplicationUser>().AddEntityFrameworkStores<AppDbContext>();
             });
         }
     }

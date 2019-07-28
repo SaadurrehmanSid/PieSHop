@@ -13,6 +13,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20190602102756_IdentityAdded.cs" />
+    <Compile Remove="Migrations\20190602102756_IdentityAdded.Designer.cs" />
+    <Compile Remove="Migrations\20190727204733_ApplicationUserClassAdded.cs" />
+    <Compile Remove="Migrations\20190727204733_ApplicationUserClassAdded.Designer.cs" />
+    <Compile Remove="Migrations\20190727214307_ApplicationUserAdded.cs" />
+    <Compile Remove="Migrations\20190727214307_ApplicationUserAdded.Designer.cs" />
+    <Compile Remove="Migrations\20190728093610_ApplicationUserAdded.cs" />
+    <Compile Remove="Migrations\20190728093610_ApplicationUserAdded.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />

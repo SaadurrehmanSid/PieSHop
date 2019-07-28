@@ -4,6 +4,8 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <script src="~/lib/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
     <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -18,8 +20,17 @@
                 <li class="nav-item">
                     <a class="nav-link text-light" asp-controller="Feedback" asp-action="Index">FeedBack</a>
                 </li>
-              
-              
+               
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Admin
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" asp-controller="account" asp-action="Index" >User Managment</a>
+                        <a class="dropdown-item" >Role Managment</a>
+                    </div>
+                </li>
+
             </ul>
             <ul class="navbar-nav ">
                 <li class="nav-item">
