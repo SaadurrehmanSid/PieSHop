@@ -23,8 +23,13 @@ using PieShop.ViewModels;
 
 #line default
 #line hidden
+#line 4 "C:\Users\Saad ur rehman\source\repos\PieSHop\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8b1f57b9be8f01d129635a348447d00a8dc266dd", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a8528feab69e0b31393f4960df52c22ed9797db7", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a7227de4c71d618e6a6f9193bad85657e2897b16", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<PieShop.ViewModels.HomeViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -94,7 +99,7 @@ WriteAttributeValue("", 225, pie.ImageThumbnailUrl, 225, 22, false);
             WriteLiteral("</h3>\r\n                <h3>\r\n                    ");
             EndContext();
             BeginContext(405, 84, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8b1f57b9be8f01d129635a348447d00a8dc266dd5366", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8b1f57b9be8f01d129635a348447d00a8dc266dd5517", async() => {
                 BeginContext(474, 2, true);
                 WriteLiteral("  ");
                 EndContext();

@@ -84,7 +84,8 @@ namespace PieShop.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = Input.Name,
+                var user = new ApplicationUser { UserName = Input.Email,
+                                                 FullName = Input.Name,
                                                  Email = Input.Email,
                                                  PhoneNumber = Input.Phone,
                                                  Address = Input.Address,

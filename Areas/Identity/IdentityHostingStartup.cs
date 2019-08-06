@@ -15,9 +15,17 @@ namespace PieShop.Areas.Identity
     {
         public void Configure(IWebHostBuilder builder)
         {
+         
             builder.ConfigureServices((context, services) => {
-                services.AddDefaultIdentity<ApplicationUser>().AddEntityFrameworkStores<AppDbContext>();
+                
+                services.AddDefaultIdentity<ApplicationUser>()
+                .AddRoles<IdentityRole>()
+                 .AddDefaultUI(UIFramework.Bootstrap4)
+                .AddEntityFrameworkStores<AppDbContext>();
             });
+
+          
+
         }
     }
 }

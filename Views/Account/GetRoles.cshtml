@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityRole>
+@{
+    ViewData["Title"] = "GetRoles";
+}
+
+    <div class="mt-4">
+
+
+        @if (!Model.Any())
+        {
+            <div>
+                <h3>No roles found!</h3>
+            </div>
+        }
+        else
+        { <h2>List of roles</h2>
+
+            <table class="table table-condensed table-bordered">
+                <tr>
+                    <th>Role ID</th>
+                    <th>Role name</th>
+
+                </tr>
+
+                @foreach (var role in Model)
+                {
+                    <tr>
+                        <td>@role.Id</td>
+                        <td>@role.Name</td>
+
+                        <td>
+                            <form asp-action="DeleteRole" asp-route-id="@role.Id" method="post">
+                                <a class="btn btn-sm btn-primary" asp-action="EditRole" asp-route-id="@role.Id">Edit</a>
+                                <button type="submit" onclick="return confirm('Do you really want to delete this user?');" class="btn btn-sm btn-danger">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+            <p>
+                <a class="btn btn-primary" asp-action="CreateRole">Create Role</a>
+            </p>
+        
+    </div>

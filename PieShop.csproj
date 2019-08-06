@@ -21,10 +21,13 @@
     <Compile Remove="Migrations\20190727214307_ApplicationUserAdded.Designer.cs" />
     <Compile Remove="Migrations\20190728093610_ApplicationUserAdded.cs" />
     <Compile Remove="Migrations\20190728093610_ApplicationUserAdded.Designer.cs" />
+    <Compile Remove="Migrations\20190731203906_uniqueNameRemove.cs" />
+    <Compile Remove="Migrations\20190731203906_uniqueNameRemove.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>

@@ -1,0 +1,40 @@
+﻿@model EditRoleVM
+@{
+    ViewData["Title"] = "Edit Role";
+}
+
+
+
+<form asp-action="EditRole" asp-controller="account" method="post">
+    <div class="form-group">
+        <h2>Edit Role</h2>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <label asp-for="Name" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Update</button>
+        <a class="btn btn-primary" asp-action="GetRoles" asp-controller="account">Cancel</a>
+    </div>
+    <div>
+        <h2>Users in role</h2>
+        @if (Model.Users.Any())
+        {
+            @foreach (var user in Model.Users)
+            {
+               <p> @user </p>
+            }
+        }
+        else
+        {
+            <p>Not at this moment</p>
+        }
+      
+    </div>
+    <div class="mt-2">
+        <a class="btn btn-primary" asp-action="EditUsersInRole" asp-controller="account" asp-route-roleID="@Model.Id">Add or remove users</a>
+    </div>
+  
+</form>
+

@@ -10,6 +10,9 @@ namespace PieShop.Models
     public class ApplicationUser : IdentityUser
     {
         [Required]
+        [MaxLength(40)]
+        public string FullName { get; set; }
+        [Required]
         [MaxLength(30)]
         public string City { get; set; }
         [Required]

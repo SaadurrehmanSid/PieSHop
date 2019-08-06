@@ -13,7 +13,14 @@
     {
       "library": "popper.js@1.15.0",
       "destination": "wwwroot/lib/"
+    },
+    {
+      "library": "jquery-validate@1.19.1",
+      "destination": "wwwroot/lib/jquery-validate/"
+    },
+    {
+      "library": "jquery-validation-unobtrusive@3.2.11",
+      "destination": "wwwroot/lib/jquery-validation-unobtrusive/"
     }
-
   ]
 }

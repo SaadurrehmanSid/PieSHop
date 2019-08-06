@@ -159,6 +159,10 @@ namespace PieShop.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(40);
+
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");

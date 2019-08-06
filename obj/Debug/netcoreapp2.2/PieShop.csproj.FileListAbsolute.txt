@@ -77,3 +77,7 @@ C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views
 C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Account\Index.g.cshtml.cs
 C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Account\CreateUser.g.cshtml.cs
 C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Account\EditUser.g.cshtml.cs
+C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Account\CreateRole.g.cshtml.cs
+C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Account\GetRoles.g.cshtml.cs
+C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Account\EditRole.g.cshtml.cs
+C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Account\EditUsersInRole.g.cshtml.cs

@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,10 +35,20 @@ namespace PieShop
             services.AddDbContext<AppDbContext>(options => {
                 options.UseSqlServer(_configuration.GetConnectionString("BathneyDb"));
             });
-            services.AddMvc();
+            services.AddMvc(
+              _configuration=> {
+                  var policy = new AuthorizationPolicyBuilder()
+                                  .RequireAuthenticatedUser()
+                                  .Build();
+                  _configuration.Filters.Add(new AuthorizeFilter(policy));
+              });
+          
+          
+
             services.AddIdentityCore<IdentityOptions>(options =>{ options.Password.RequireUppercase = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.User.AllowedUserNameCharacters = String.Empty;
+                options.User.RequireUniqueEmail = true;
             }); 
         }
 
