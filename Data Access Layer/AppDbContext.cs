@@ -17,5 +17,6 @@ namespace PieShop.Data_Access_Layer
         }
         public DbSet<Pie> Pies { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
+        public DbSet<PieReview> PieReviews { get; set; }
     }
 }

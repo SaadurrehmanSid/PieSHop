@@ -81,3 +81,4 @@ C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views
 C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Account\GetRoles.g.cshtml.cs
 C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Account\EditRole.g.cshtml.cs
 C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Account\EditUsersInRole.g.cshtml.cs
+C:\Users\Saad ur rehman\source\repos\PieSHop\obj\Debug\netcoreapp2.2\Razor\Views\Pie\Details.g.cshtml.cs

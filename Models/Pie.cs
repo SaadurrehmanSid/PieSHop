@@ -7,6 +7,7 @@ namespace PieShop.Models
 {
     public class Pie
     {
+        
         public int Id { get; set; }
         public string Name { get; set; }
         public string ShortDescription { get; set; }
@@ -16,5 +17,6 @@ namespace PieShop.Models
         public string ImageThumbnailUrl { get; set; }
         public bool IsPieOfTheWeek { get; set; }
         public bool IsInStock { get; set; }
+        public virtual List<PieReview> PieReviews { get; set; }
     }
 }

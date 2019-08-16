@@ -26,10 +26,7 @@ namespace PieShop.Controllers
             };
             return View(HomeModel);
         }
-        public IActionResult Details(int id) {
-           var pie = _pieRepository.GetPie(id);
-            return View(pie);
-        }
+      
 
 
     }

@@ -31,6 +31,7 @@ namespace PieShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IPieRepository, PieRepository>();
+            services.AddTransient<IPieReviewRepository, PieReviewRepository>();
             services.AddTransient<IFeedbackRepository, FeedbackRepository>();
             services.AddDbContext<AppDbContext>(options => {
                 options.UseSqlServer(_configuration.GetConnectionString("BathneyDb"));
